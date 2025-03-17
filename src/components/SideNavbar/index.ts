@@ -1,3 +1,3 @@
-import SideNavBar from './SideNavbar';
+import SideNavbar from './SideNavbar';
 
-export { SideNavBar }
+export { SideNavbar }

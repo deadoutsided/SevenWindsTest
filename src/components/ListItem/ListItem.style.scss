@@ -1,0 +1,19 @@
+@import "../../variables.style.scss";
+
+.ListItem {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    background-color: transparent;
+    padding: 5px 0 5px 20px;
+
+    &_selected {
+        background-color: $list_item_selected_background;
+    }
+
+    &__title {
+        @include text($font_size_standart, $main_text_color, $line_height_standart);
+        margin: 0;
+        padding: 2px 0 0;
+    }
+}

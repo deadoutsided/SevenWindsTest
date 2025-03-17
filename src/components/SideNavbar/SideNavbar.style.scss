@@ -1,0 +1,48 @@
+@import "../../variables.style.scss";
+
+.SideNavbar {
+    width: 12%;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: $main_border_color;
+    height: 100%;
+}
+
+.Select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 7px 8px 20px;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: $main_border_color;
+
+    &__text-wrapper {
+
+    }
+
+    &__text_pos_top {
+        @include text($font_size_standart, $secondary_text_color, $line_height_standart);
+        margin: 0px;
+    }
+
+    &__text_pos_bottom {
+        @include text($font_size_small, $secondary_text_color, $line_height_standart);
+        margin: 0px;
+    }
+
+
+    &__arrow-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.List {
+    margin: 0px;
+    padding: 0px;
+}

@@ -8,6 +8,9 @@
     height: fit-content;
     display: flex;
     align-items: center;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $main_border_color;
 
     &__button {
         @include drop_button_styles;
