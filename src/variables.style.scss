@@ -1,0 +1,39 @@
+$main_bg_color: #27272A;
+$secondary_bg_color: #202124;
+$main_text_color: #FFF;
+$secondary_text_color: #A1A1AA;
+$main_font: Roboto;
+$font_size_big: 18px;
+$font_size_standart: 14px;
+$font_size_small: 10px;
+$font_weight: 400;
+$line_height_high: 130%;
+$line_height_standart: 100%;
+
+@mixin text($font_size: $font_size_standart, $color: $main_text_color, $line_height: $line_height_high) {
+    font-family: $main_font;
+    font-size: $font_size;
+    font-weight: $font_weight;
+    line-height: $line_height;
+    color: $color;
+}
+
+@mixin drop_button_styles {
+    background-color: transparent;
+    border-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* @mixin large_text {
+    @include standart_text;
+
+    font-size: $font_size_big;
+    line-height: $line_height_standart;
+}
+
+@mixin small_text {
+    @include standart_text;
+    font-size: $font_size_small;
+} */

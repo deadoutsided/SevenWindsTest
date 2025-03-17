@@ -1,0 +1,47 @@
+@import "../../variables.style.scss";
+
+.header {
+    background-color: $main_bg_color;
+    width: 100%;
+    max-height: 50px;
+    min-height: 44px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+
+    &__button {
+        @include drop_button_styles;
+        margin: 0 0 0 20px;
+    }
+
+    &__navigation {
+        height: 100%;
+    }
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0 0 0 28px;
+    padding: 0;
+    height: 100%;
+
+    &__element {
+        @include text($font_size_standart, $secondary_text_color, $line_height_standart);
+        display: block;
+        box-sizing: border-box;
+        height: 100%;
+
+        &_active {
+            @include text($font_size_standart, $main_text_color, $line_height_standart);
+            border-style: solid;
+            border-color: #FFF;
+            border-width: 0 0 1px;
+        }
+
+        &:not(:first-of-type) {
+            margin: 0 0 0 28px;
+        }
+    }
+}

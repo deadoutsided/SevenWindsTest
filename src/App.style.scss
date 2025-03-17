@@ -1,3 +1,5 @@
+@import "variables.style.scss";
+
 body {
     margin: 0;
     height: 100vh;
@@ -5,15 +7,17 @@ body {
 
     > #root {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: inherit;
         width: inherit;
 
-        > iframe {
-            height: 100%;
+        > .main {
+            @include text($font_size_small, $secondary_text_color, $line_height_standart);
             width: 100%;
-            border: unset;
+            height: 100%;
+            background-color: $main_bg_color;
         }
     }
 }
