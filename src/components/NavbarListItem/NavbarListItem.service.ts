@@ -1,4 +1,4 @@
-import { ListItemProps } from "./ListItem";
+import { ListItemProps } from "./NavbarListItem";
 
 export const listData: ListItemProps[] = [
     {title: 'По проекту', selected: false},

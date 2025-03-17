@@ -1,0 +1,38 @@
+@import "../../variables.style.scss";
+
+.hierarchy-list-item {
+  @include border(0 0 1px);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 61px;
+
+  &__column {
+    @include text($font_size_standart, $main_text_color, $line_height_high);
+    flex: 2 0 0;
+    padding: 18px 0 18px 12px;
+
+    /* &:first-child {
+      flex: 1 0;
+      height: 24px;
+    } */
+
+    &:nth-child(1) {
+      flex: 7 7;
+    }
+  }
+}
+
+/* .line-wrapper {
+  &_orientation_vertical {
+    position: relative;
+    top: -7px;
+    left: 0px;
+  }
+  &_orientation_horizontal {
+    position: relative;
+    top: -27px;
+    left: -14px;
+  }
+}
+ */

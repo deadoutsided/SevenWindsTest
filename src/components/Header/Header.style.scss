@@ -32,7 +32,8 @@
 
     &__element {
         @include text($font_size_standart, $secondary_text_color, $line_height_standart);
-        display: block;
+        display: flex;
+        align-items: center;
         box-sizing: border-box;
         height: 100%;
 

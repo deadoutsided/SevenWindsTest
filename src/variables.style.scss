@@ -26,6 +26,15 @@ $line_height_standart: 100%;
     margin: 0;
     padding: 0;
     border: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    height: 24px;
+}
+
+@mixin border($border_width: 0, $border_style: solid, $border_color: $main_border_color) {
+    border-width: $border_width;
+    border-style: $border_style;
+    border-color: $border_color;
 }
 
 /* @mixin large_text {

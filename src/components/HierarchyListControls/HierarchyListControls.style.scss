@@ -1,0 +1,99 @@
+@import "../../variables.style.scss";
+
+.hierarchy-list-controls {
+  margin: 0 0 0 0px;
+  max-width: 120px;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex: 2 0 0;
+    overflow-x: scroll;
+  }
+
+  /* &__button-wrapper {
+        @include drop_button_styles;
+        @include border(0 0 1px);
+        display: flex;   
+        box-sizing: border-box;
+        max-height: 61px;
+        width: fit-content;
+        position: relative;
+    
+        
+      } */
+}
+
+.hierarchy-element {
+  @include border(0 0 1px);
+  box-sizing: border-box;
+  max-height: 61px;
+  width: fit-content;
+
+  @for $i from 0 to 20 {
+    &_level_#{$i} {
+      padding: 18px 20px 18px calc(12px + #{$i} * 20px);
+    }
+  }
+
+  &:has(.button-wrapper__button:hover) {
+    background-color: $secondary_text_color;
+  }
+}
+
+.hierarchy-button-wrapper {
+  display: flex;
+  box-sizing: border-box;
+  max-height: 61px;
+  width: 100%;
+  position: relative;
+
+  
+
+  &__hover-elem{
+    min-width: 55px;
+    &:hover{border-radius: 6px;
+    background-color: $main_border_color;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    > :nth-child(2) {
+      /* border-radius: 0 6px 6px 0; */
+      width: 24px;
+      padding: 4px 0 0;
+      display: initial;
+    }}
+  }
+
+  /* &:has(.hierarcy-button-wrapper__button:first-child:hover) {
+    > .hierarcy-button-wrapper__button {
+      border-radius: 6px 0 0 6px;
+      background-color: $secondary_text_color;
+      &:nth-child(2) {
+        border-radius: 0 6px 6px 0;
+        display: initial;
+      }
+    }
+  } */
+
+  &__button {
+    @include drop_button_styles;
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+.line-wrapper {
+  &_orientation_vertical {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+  }
+  &_orientation_horizontal {
+    position: absolute;
+    top: 5px;
+    left: -8px;
+  }
+}

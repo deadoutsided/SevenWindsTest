@@ -1,4 +1,4 @@
-import "./ListItem.style.scss";
+import "./NavbarListItem.style.scss";
 import ListItemIcon from '../../images/ListItemIcon.svg'
 
 export type ListItemProps = {
@@ -8,9 +8,9 @@ export type ListItemProps = {
 
 export default function ListItem({title, selected} : ListItemProps) {
     return (
-        <li className={"ListItem" + " " + (selected ? "ListItem_selected" : "")}>
+        <li className={"list-item" + " " + (selected ? "list-item_selected" : "")}>
             <ListItemIcon/>
-            <p className="ListItem__title">{title}</p>
+            <p className="list-item__title">{title}</p>
         </li>
     )
 }

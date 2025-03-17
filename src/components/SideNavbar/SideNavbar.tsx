@@ -1,6 +1,6 @@
 import "./SideNavbar.style.scss";
 import ArrowIcon from "../../images/arrowDown.svg";
-import { listData, ListItem, ListItemProps } from "../ListItem";
+import { listData, ListItem, ListItemProps } from "../NavbarListItem";
 import { useCallback, useMemo } from "react";
 
 export default function SideNavbar() {
@@ -12,18 +12,18 @@ export default function SideNavbar() {
         return listData.map((el, i) => renderItems(el, i))
     }, [listData])
   return (
-    <nav className="SideNavbar">
-      <div className="Select">
-        <div className="Select__text-wrapper">
-          <p className="Select__text_pos_top">Название проекта</p>
-          <p className="Select__text_pos_bottom">Аббревиатура</p>
+    <nav className="side-navbar">
+      <div className="select">
+        <div className="select__text-wrapper">
+          <p className="select__text_pos_top">Название проекта</p>
+          <p className="select__text_pos_bottom">Аббревиатура</p>
         </div>
-        <div className="Select__arrow-icon-wrapper">
+        <div className="select__arrow-icon-wrapper">
           <ArrowIcon />
         </div>
       </div>
-      <div className="List-wrapper">
-        <ul className="List">
+      <div className="list-wrapper">
+        <ul className="list">
             {itemsRendered}
         </ul>
       </div>
